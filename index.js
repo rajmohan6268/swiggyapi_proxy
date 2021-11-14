@@ -9,9 +9,10 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
 
-  res.send("ok");
+  res.json("ok");
+  return
 
-})
+});
 app.get("*", async (req, res) => {
   console.log(req.originalUrl);
 
@@ -35,6 +36,7 @@ app.get("*", async (req, res) => {
   );
   // console.log(body);
   res.json(body);
+  return
 });
 
 app.listen(port, () => {
