@@ -1,17 +1,16 @@
 const express = require("express");
-const app = express();
-const port = 3000;
+
 const got = require("got");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const app = express();
+const port = 3000;
 app.use(cors());
-app.use(express.json())
+app.use(express.json());
 
 app.get("/", (req, res) => {
-
   res.json("ok");
-  return
-
+  return;
 });
 app.get("*", async (req, res) => {
   console.log(req.originalUrl);
@@ -36,7 +35,7 @@ app.get("*", async (req, res) => {
   );
   // console.log(body);
   res.json(body);
-  return
+  return;
 });
 
 app.listen(port, () => {
