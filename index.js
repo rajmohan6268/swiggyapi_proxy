@@ -1,7 +1,5 @@
 const express = require("express");
-
 const got = require("got");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const port = 5000;
@@ -11,6 +9,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json("ok");
 });
+
+
 // app.get("*", async (req, res) => {
 //   console.log(req.originalUrl);
 
