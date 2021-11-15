@@ -32,6 +32,10 @@ app.get("*", async (req, res) => {
   // console.log(body);
   res.json(body);
 });
+
+// TO DO have to do post put delete patch etc....
+
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
